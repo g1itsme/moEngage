@@ -1,0 +1,61 @@
+.pagination {
+  display: inline;
+}
+
+.pagination>li {
+  display: inline;
+}
+
+.pagination>.active>a {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+
+.details>tr {
+  width: 100%;
+}
+button{
+    margin-top: 1%;
+    padding: 11px;
+    border-radius: 8%;
+    font-size: medium;
+    color: #090110;
+}
+input{
+    display: block;
+    width: 20%;
+    height: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.details>tr>td {
+  width: 10vw;
+  padding: 2%;
+  border-bottom: 1px solid black;
+}
+
+.actions>a {
+  padding: 3%;
+
+}
+
+.pagination>li>a {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #337ab7;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}

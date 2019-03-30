@@ -1,0 +1,18 @@
+<div>
+  <mat-dialog-content>
+
+    <div>
+
+      <input [(ngModel)]="name" type="text" matInput placeholder="give the new name ">
+
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <div>
+
+      <button mat-button class="button success" (click)="onConfirmClick()">Confirm</button>
+      <button class="button close" (click)="onNoClick()">No Thanks</button>
+
+    </div>
+  </mat-dialog-actions>
+</div>

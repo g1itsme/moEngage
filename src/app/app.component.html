@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <div class="header">
+  <input type="text"[(ngModel)]="searchItem">
+  <button (click)="searchItems()">search</button>
+  </div>
+  <table>
+    <thead>
+      <th>Campign Name</th>
+      <th>Type</th>
+      <th>Last saved</th>
+      <th>Actions</th>
+    </thead>
+    <tbody class="details">
+      <tr *ngFor="let t of pagedItems;let i=index">
+        <td>{{t.name}}</td>
+        <td>{{t.type}}</td>
+        <td>{{t.lastsaved}}</td>
+        <td class="actions">
+          <a (click)="changeName(i)">edit</a>
+          <a (click)="deleteComp(i)">delete</a>
+          <span></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+    <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <a (click)="setPage(1)">First</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+    </li>
+    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+        <a (click)="setPage(page)">{{page}}</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+        <a (click)="setPage(pager.currentPage + 1)">Next</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+        <a (click)="setPage(pager.totalPages)">Last</a>
+    </li>
+</ul>
+</div>
+
